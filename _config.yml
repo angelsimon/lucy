@@ -1,0 +1,47 @@
+# Lucy — Tema para Jekyll
+title: LUCY
+description: Tema minimalista para Jekyll, pensado para blogs personales y documentación
+  ligera.
+url: ''
+baseurl: ''
+keywords: jekyll, tema, blog, minimalista, lucy
+google_analytics: ''
+author:
+  name: Tu Nombre
+  github: https://github.com/tu-usuario
+  youtube: https://www.youtube.com/@tu-canal
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /:year/:month/:day/:title/
+paginate: 5
+paginate_path: /page/:num
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+exclude:
+- .jekyll-cache
+- .sass-cache
+- Gemfile
+- Gemfile.lock
+- README.md
+- _site
+- node_modules
+- vendor
+timezone: America/Argentina/Buenos_Aires
+lang: es
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+disqus:
+  shortname: ''

@@ -1,0 +1,27 @@
+{%- comment -%}
+Disqus comments (optional)
+Configure in _config.yml:
+disqus:
+  shortname: "tu-shortname"
+{%- endcomment -%}
+
+{% assign disqus_shortname = site.disqus.shortname | default: site.disqus_shortname %}
+
+{% if disqus_shortname %}
+<section class="comments">
+  <div class="comment-wrapper">
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + '{{ disqus_shortname }}' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the comments powered by Disqus.
+    </noscript>
+  </div>
+</section>
+{% endif %}
